@@ -1,0 +1,13 @@
+<h1>Chat#show</h1>
+<% if @messages.blank? %>
+  <div class="message">
+    <p>You have no message.</p>
+  </div>
+<% else %>
+  <p>You have messages.</p>
+  <% @messages.each do |message| %>
+  <div class="messages">
+    <p><%= message.body %></p>
+  </div>
+  <% end %>
+<% end %>
